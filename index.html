@@ -530,10 +530,18 @@
         }
 
         function mostrarPopup() {
-            document.getElementById('popup').style.display = 'block';
-            popup.style.display = "block";
-            document.documentElement.scrollTop = 0; 
-            document.body.scrollTop = 0;
+            //document.getElementById('popup').style.display = 'block';
+            //document.documentElement.scrollTop = 0; 
+            //document.body.scrollTop = 0;
+            var popup = document.getElementById('popup');
+    
+    if (popup) {
+        popup.style.display = 'block';
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    } else {
+        console.error('Elemento popup não encontrado!');
+    }
         }
 
         function fecharPopup() {
