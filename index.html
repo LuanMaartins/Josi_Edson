@@ -530,18 +530,8 @@
         }
 
         function mostrarPopup() {
-            //document.getElementById('popup').style.display = 'block';
-            //document.documentElement.scrollTop = 0; 
-            //document.body.scrollTop = 0;
-            var popup = document.getElementById('popup');
-    
-    if (popup) {
-        popup.style.display = 'block';
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-    } else {
-        console.error('Elemento popup não encontrado!');
-    }
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popup').scrollTop = 0; 
         }
 
         function fecharPopup() {
