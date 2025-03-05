@@ -531,6 +531,11 @@
 
         function mostrarPopup() {
             document.getElementById('popup').style.display = 'block';
+            
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            }); 
         }
 
         function fecharPopup() {
