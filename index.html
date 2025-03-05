@@ -587,6 +587,20 @@ function verificarAcesso() {
 }
 
 verificarAcesso();
+
+        // Desabilita o clique com o botão direito do mouse
+        document.addEventListener("contextmenu", function(event) {
+          event.preventDefault();
+          alert("A funcionalidade de inspeção foi desativada.");
+        });
+        
+        // Desabilita a tecla F12
+        document.addEventListener("keydown", function(event) {
+          if (event.keyCode === 123) { // F12
+            event.preventDefault();
+            alert("A funcionalidade de inspeção foi desativada.");
+          }
+        });    
     </script>
 </body>
 </html>
