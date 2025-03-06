@@ -575,7 +575,7 @@
             }
         }
 
-               let diferencaHorario = 0; // Diferença entre o horário local e o de Brasília
+        let diferencaHorario = 0; // Diferença entre o horário local e o de Brasília
 
         async function sincronizarHorario() {
             try {
@@ -609,12 +609,13 @@
         
             const dataLiberacao = new Date('2025-03-06T17:53:00-03:00'); // Data alvo fixa
         
-            setInterval(() => {
+            const intervalo = setInterval(() => {
                 const agora = new Date(new Date().getTime() + diferencaHorario); // Ajusta a diferença no relógio local
                 const diff = dataLiberacao - agora; // Calcula o tempo restante
         
                 if (diff <= 0) {
                     location.reload(); // Atualiza a página quando chegar a data
+                    clearInterval(intervalo);
                     return;
                 }
         
